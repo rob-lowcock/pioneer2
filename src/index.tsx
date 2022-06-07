@@ -10,8 +10,10 @@ const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 
+const graphql = process.env.REACT_APP_GRAPHQL_URI === undefined ? '/graphql' : process.env.REACT_APP_GRAPHQL_URI;
+
 const client = new ApolloClient({
-  uri: process.env.REACT_APP_GRAPHQL_URI,
+  uri: graphql,
   cache: new InMemoryCache()
 });
 
