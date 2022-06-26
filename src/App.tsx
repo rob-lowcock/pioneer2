@@ -1,5 +1,6 @@
 import { gql, useMutation } from "@apollo/client";
 import React, { useState } from "react";
+import Navigation from "./Navigation";
 import SuggestionMessage from "./SuggestionMessage";
 
 export default function App() {
@@ -20,6 +21,7 @@ export default function App() {
 
   return (
     <div className="h-screen bg-white dark:bg-gray-800 dark:text-white">
+      <Navigation />
       <div className="h-full mt-0 flex items-center">
         <div className="container mx-auto">
           <SuggestionMessage data={data} error={error} />
