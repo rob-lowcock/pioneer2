@@ -16,7 +16,7 @@ export default function App() {
     } 
   `;
 
-  const [createSuggestion, { data, loading, error}] = useMutation(ADD_SUGGESTION);
+  const [createSuggestion, { data, error}] = useMutation(ADD_SUGGESTION);
 
   return (
     <div className="h-screen bg-white dark:bg-gray-800 dark:text-white">
